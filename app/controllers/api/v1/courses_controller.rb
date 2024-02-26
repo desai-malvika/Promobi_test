@@ -1,4 +1,4 @@
-class CoursesController < ApplicationController
+class Api::V1::CoursesController < ApplicationController
 	def index
 		courses = Course.includes(:tutors)
     render json: courses, each_serializer: CourseWithTutorsSerializer
